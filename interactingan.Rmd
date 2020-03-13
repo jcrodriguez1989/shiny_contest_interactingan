@@ -1,0 +1,60 @@
+---
+title: "Shiny Contest 2020: Interactive Presentation Ninja"
+subtitle: "⚔<br/>with interactingan"
+author: "Juan Cruz Rodriguez"
+institute: "FAMAF - UNC"
+date: "2020/03/12 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+# Start interacting!! [https://jcrodriguez.shinyapps.io/shiny_contest/](https://jcrodriguez.shinyapps.io/shiny_contest/)
+
+```{r echo=FALSE, message=FALSE, fig.align='center'}
+library("interactingan")
+# Will configure an empty app to the shinyapps server;
+# and show a qr code that points to the interactingan app url.
+# Keep the resulting `shiny` app in the `out_dir` folder.
+set_app(app_name = "shiny_contest", out_dir = "./resulting_shiny_app/")
+```
+
+---
+
+# Which `shiny` app do you think is going to win the `shiny` contest?
+
+`r interactingan::wordcloud("Shiny Contest 2020 winner", max_words = 1)`
+
+---
+
+# Have you already seen the `heyshiny` package?
+
+`r poll("Already seen heyshiny?", c("Yes", "No", "Won't answer!"))`
+
+---
+
+# How likely would you use `interactingan`?
+
+`r rating("Rate interactingan:")`
+
+---
+
+# Any feedback about `interactingan`?
+
+`r question("Feedback:")`
+
+---
+
+# Questions?
+
+<!-- Show the audience question's pane -->
+`r audience_questions()`
+
+```{r echo=FALSE}
+# Deploys the final interactingan app to the shinyapps server
+deploy_interactions()
+```

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Shiny Contest 2020: Interactive Presentation Ninja</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Juan Cruz Rodriguez" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Shiny Contest 2020: Interactive Presentation Ninja
+## ⚔<br/>with interactingan
+### Juan Cruz Rodriguez
+### FAMAF - UNC
+### 2020/03/12 (updated: 2020-03-12)
+
+---
+
+
+# Start interacting!! [https://jcrodriguez.shinyapps.io/shiny_contest/](https://jcrodriguez.shinyapps.io/shiny_contest/)
+
+&lt;img src="interactingan_files/figure-html/unnamed-chunk-1-1.png" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Which `shiny` app do you think is going to win the `shiny` contest?
+
+&lt;p align="center"&gt;&lt;button id="wordcloud_1_btn" onClick='document.getElementById("wordcloud_1_frame").src = "https://jcrodriguez.shinyapps.io/shiny_contest/?viewer=IACC&amp;object=wordcloud_1";document.getElementById("wordcloud_1_btn").style.display = "none";'&gt;Load wordcloud&lt;/button&gt;&lt;/p&gt;&lt;iframe id="wordcloud_1_frame" width="100%" height="500px" frameborder="0" scrolling="no"&gt;&lt;/iframe&gt;
+
+---
+
+# Have you already seen the `heyshiny` package?
+
+&lt;p align="center"&gt;&lt;button id="poll_1_btn" onClick='document.getElementById("poll_1_frame").src = "https://jcrodriguez.shinyapps.io/shiny_contest/?viewer=IACC&amp;object=poll_1";document.getElementById("poll_1_btn").style.display = "none";'&gt;Load poll&lt;/button&gt;&lt;/p&gt;&lt;iframe id="poll_1_frame" width="100%" height="500px" frameborder="0" scrolling="no"&gt;&lt;/iframe&gt;
+
+---
+
+# How likely would you use `interactingan`?
+
+&lt;p align="center"&gt;&lt;button id="rating_1_btn" onClick='document.getElementById("rating_1_frame").src = "https://jcrodriguez.shinyapps.io/shiny_contest/?viewer=IACC&amp;object=rating_1";document.getElementById("rating_1_btn").style.display = "none";'&gt;Load rating&lt;/button&gt;&lt;/p&gt;&lt;iframe id="rating_1_frame" width="100%" height="500px" frameborder="0" scrolling="no"&gt;&lt;/iframe&gt;
+
+---
+
+# Any feedback about `interactingan`?
+
+&lt;p align="center"&gt;&lt;button id="question_1_btn" onClick='document.getElementById("question_1_frame").src = "https://jcrodriguez.shinyapps.io/shiny_contest/?viewer=IACC&amp;object=question_1";document.getElementById("question_1_btn").style.display = "none";'&gt;Load question&lt;/button&gt;&lt;/p&gt;&lt;iframe id="question_1_frame" width="100%" height="500px" frameborder="0" scrolling="yes"&gt;&lt;/iframe&gt;
+
+---
+
+# Questions?
+
+&lt;!-- Show the audience question's pane --&gt;
+&lt;p align="center"&gt;&lt;button id="aud_qs_btn" onClick='document.getElementById("aud_qs_frame").src = "https://jcrodriguez.shinyapps.io/shiny_contest/?viewer=IACC&amp;object=aud_qs";document.getElementById("aud_qs_btn").style.display = "none";'&gt;Load audience questions&lt;/button&gt;&lt;/p&gt;&lt;iframe id="aud_qs_frame" width="100%" height="500px" frameborder="0" scrolling="yes"&gt;&lt;/iframe&gt;
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  /* Replace <script> tags in slides area to make them executable
+   *
+   * Runs after post-processing of markdown source into slides and replaces only
+   * <script>s on the last slide of continued slides using the .has-continuation
+   * class added by xaringan. Finally, any <script>s in the slides area that
+   * aren't executed are commented out.
+   */
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container:not(.has-continuation) script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+  var scriptsNotExecuted = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container.has-continuation script'
+  );
+  if (!scriptsNotExecuted.length) return;
+  for (var i = 0; i < scriptsNotExecuted.length; i++) {
+    var comment = document.createComment(scriptsNotExecuted[i].outerHTML)
+    scriptsNotExecuted[i].parentElement.replaceChild(comment, scriptsNotExecuted[i])
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
